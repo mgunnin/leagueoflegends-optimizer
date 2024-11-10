@@ -45,13 +45,13 @@ The more you repeat this process, the more data your dataset will have. If you w
 1. Before executing anything, we need to create a local sqlite3 database by running:
 
     ```bash
-    λ <copy>python src/init_db.py</copy>
+    python src/init_db.py
     ```  
 
 2. To extract player data, we can run:
 
     ```bash
-    λ <copy>python src/cloudshell_league.py</copy>
+    python src/cloudshell_league.py
     ```  
 
     ![player list result](images/result-player-list.PNG)
@@ -62,7 +62,7 @@ The more you repeat this process, the more data your dataset will have. If you w
 3. To extract previously played matches' IDs from our pool of players in the database, we can do this:
 
     ```bash
-    λ <copy>python src/cloudshell_league.py --mode="match_list"</copy>
+    python src/cloudshell_league.py --mode="match_list"
     ```
 
     ![match list result](images/result-match-list.PNG)
@@ -76,7 +76,7 @@ The more you repeat this process, the more data your dataset will have. If you w
 1. Let's process each player's performance:
 
     ```bash
-    <copy>python src/cloudshell_process_performance.py</copy>
+    python src/cloudshell_process_performance.py
 
     # it will then start extracting individual player matches' info and processing their performance.
     ```
@@ -88,7 +88,7 @@ The more you repeat this process, the more data your dataset will have. If you w
 1. Now that we have loads of players' performances calculated, we just have to pass this to a `csv` format.
 
     ```bash
-    <copy>python src/read_data.py</copy>
+    python src/read_data.py
 
 
     # this script will generate 3 csv files:
